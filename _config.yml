@@ -1,0 +1,21 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            notbjerg
+tagline:          'code, thoughts & scribbles'
+baseurl:          /
+
+author:
+  name:           'Oliver'
+  url:            https://twitter.com/ONordbjerg
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
