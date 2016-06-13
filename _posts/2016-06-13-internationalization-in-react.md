@@ -15,15 +15,6 @@ import da from '../lang/da'
 /**
  * Could be refactored in to JSON files that are lazily loaded. It could
  * also use a 3rd party localization service. Maybe.
- *
- * Example translation (for MyComponent for the ``en`` key in ``languages``)
- *
- *	  {
- *      'en': {
- *        'MyComponent': { 'hello': 'Hello, world' }
- *      }
- *    }
- *
  */
 const languages = {
   en,
@@ -32,12 +23,6 @@ const languages = {
 ​
 /**
  * A higher order component that makes our components international. 😎
- *
- * Example usage (MyComponent.js):
- *
- * 	  const MyComponent = ({ strings }) => <div>{strings.hello}</div>
- *	  export default translate('MyComponent')(MyComponent)
- *
  */
 export default function translate (key) {
   return Component => {
@@ -58,3 +43,22 @@ export default function translate (key) {
 ```
 
 It's pretty simple, but thus far it has worked pretty good in my projects.
+
+This is an example of a file with localized strings:
+
+```json
+{
+  "MyComponent": { "hello": "Hello, world!" }
+}
+```
+
+And this is an example usage:
+
+```js
+import translate from './translate'
+
+const MyComponent = ({ strings }) =>
+  (<div>{strings.hello}</div>)
+
+export default translate('MyComponent')(MyComponent)
+```
