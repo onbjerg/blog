@@ -7,7 +7,7 @@ A simple way to make your React SPA international is to use a higher-order compo
 
 This is what I came up with:
 
-{% highlight javascript %}
+```js
 import React from 'React'
 import en from '../lang/en'
 import da from '../lang/da'
@@ -55,6 +55,6 @@ export default function translate (key) {
     return TranslationComponent
   }
 }
-{% endhighlight %}
+```
 
 It's pretty simple, but thus far it has worked pretty good in my projects.
