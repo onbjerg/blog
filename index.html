@@ -1,80 +1,228 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>notbjerg.me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oliver Nordbjerg</title>
   <style type="text/css">
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+  @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
   html,
   body {
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
+    font-size: 16px;
   }
 
   body {
-    background-color: #111;
-    color: #ddd;
-    font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: normal;
-    position: relative;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    overflow-y: hidden;
+  }
+
+  h2 {
+    margin-top: 1.5em;
+  }
+
+  h2:first-child {
+    margin-top: 0;
   }
 
   a {
-    color: #0074D9;
+    border-bottom: 2px solid #333;
     text-decoration: none;
+    color: #333;
   }
 
-  p {
-    max-width: 40em;
+  .badge {
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    color: #fff;
+    font-weight: lighter;
   }
 
-  ul,
-  ol {
-    list-style: none;
+  .badge.crimson {
+    background-color: crimson;
   }
 
-  .header-headline {
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0 0 1em 0;
-    text-align: center;
+  .badge.dodgerblue {
+    background-color: dodgerblue;
   }
 
-  .header-actions .btn {
-    margin-bottom: 1em;
-    margin-right: 1em;
+  .badge.gold {
+    background-color: gold;
   }
 
-  .btn {
-    font-size: 13px;
-    text-decoration: none;
-    color: #0074D9;
-    margin: 0 15px;
+  .badge.dark {
+    background-color: #444;
   }
-  .btn:hover {
-    background-color: #0074D9;
-    color: #ffffff;
+
+  #oliver,
+  #work {
+    padding: 2em;
+  }
+
+  #oliver {
+    width: 25%;
+    background-image: linear-gradient(to top right, #7f41ef, #4f29d0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #work {
+    width: 75%;
+    overflow-y: scroll;
+  }
+
+  #o {
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 10em;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+      flex-direction: column;
+      overflow: scroll;
+      font-size: 14px;
+    }
+
+    #oliver,
+    #work {
+      width: auto;
+    }
+
+    #oliver {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+    }
+
+    #o {
+      font-size: 5em;
+      padding-bottom: .25em;
+    }
   }
   </style>
 </head>
 <body>
-  <div class="main">
-    <h1 class="header-headline">Oliver</h1>
-    <div class="header-actions">
-      <a class="btn" href="https://twitter.com/ONordbjerg">Twitter</a>
-      <a class="btn" href="https://github.com/onbjerg">GitHub</a>
-      <a class="btn" href="https://keybase.io/onbjerg">Keybase</a>
-      <a class="btn" href="https://t.me/notbjerg">Contact</a>
-    </div>
-  </div>
+  <section id="oliver">
+    <h1 id="o">o</h1>
+  </section>
+  <section id="work">
+    <!-- Description of self -->
+    <h2>Who I am</h2>
+    <p>
+      My name is Oliver.
+    </p>
+    <p>
+      I'm a 22 year old self-taught programmer with 10 years of experience in web development. I wrote my first line of code at age 11 and got hired as a junior developer when I was 12.
+    </p>
+    <p>
+      Problem solving is what I enjoy the most, and I try to learn a new concept or language as often as possible.
+    </p>
+    <p>
+      I have a strong sense of business and I understand how to work in an environment with changing needs.
+    </p>
+    <p>
+      I am a very vocal individual. I enjoy participating in decision-making processes and brainstorming activities.
+    </p>
+
+    <!-- Areas of expertise -->
+    <h2>What I do</h2>
+    <p>My expertise is the planning, architectural design and production of</p>
+    <p>
+      <strong>Web applications</strong> that are maintainable and scale according to needs
+    </p>
+    <p>
+      <strong>Automation tools</strong> that ease menial tasks
+    </p>
+    <p>
+      <strong>Developer tools</strong> that make your life easier
+    </p>
+
+    <!-- Work experience -->
+    <h2>What I've done</h2>
+    <p>
+      I'm located in <strong>Copenhagen, Denmark</strong>, but my work is international. This work includes:
+    </p>
+    <h3><a href="https://aragon.org">Aragon Project</a> (2017 &mdash; 2018)</h3>
+    <p>
+      I was one of the earliest members of the Aragon Project. I helped shape aragonOS and I built developer tools and libraries, primarily <a href="https://github.com/aragon/aragon.js">Aragon.js</a> and <a href="https://github.com/aragon/radspec">Radspec</a>.
+    </p>
+
+    <h3><a href="https://bilagscan.dk">Bilagscan</a> (2016 &mdash; 2017)</h3>
+    <p>
+      I was one of the earliest employees in this Danish startup that is trying to combat paper vouchers. You simply snap a photo of your voucher and the system mines it for data using OCR and tries to add it to your bookkeeping using machine learning.
+    </p>
+
+    <h3>Noak (2015 &mdash; 2018)</h3>
+    <p>
+      A two-man web agency I started with my friend <a target="_blank" href="http://jonasgoth.dk/">Jonas</a>. We created and maintained websites for a number of clients.
+    </p>
+
+    <h3><a href="https://pandiweb.dk">Pandisign</a> (2011 &mdash; 2014)</h3>
+    <p>
+      One of my first experiences working with web development professionally was at Pandisign (now Pandiweb), a web agency that creates websites for a number of different clients, as well as some in-house projects.
+    </p>
+
+    <!-- Side gigs -->
+    <h2>What I've tinkered with</h2>
+    <p>Additionally I also frequently learn new things. Some of these result in pet projects, such as:</p>
+    <h3>
+      <a href="https://github.com/onbjerg/foton">foton</a>
+      <span class="badge crimson">Rust</span>
+      <span class="badge dodgerblue">Computer Graphics</span>
+    </h3>
+    <p>A small naïve implementation of a ray tracer written in Rust. In this project I wanted to explore computer graphics and sharpen my math knowledge.</p>
+    <!--<h3>
+      <a href="https://github.com/onbjerg/notion">notion</a>
+      <span class="badge gold">JavaScript</span>
+      <span class="badge dark">Ethereum</span>
+    </h3>
+    <p>Speculative execution for Ethereum dapps.</p>-->
+
+    <!-- Contact -->
+    <h2>Let's get in touch</h2>
+    <p>
+      Let's have a commitment free conversation about your needs.
+    </p>
+    <p>
+      I am fluent in
+      <ul>
+        <li>JavaScript (Node.js and React)</li>
+        <li>PHP</li>
+      </ul> 
+    </p>
+    <p>
+      I am comfortable in
+      <ul>
+        <li>Rust</li>
+        <li>Go</li>
+        <li>Solidity</li>
+        <li>Bash</li>
+      </ul>
+    </p>
+    <p>
+      I have experience with
+      <ul>
+        <li>Java</li>
+        <li>C#</li>
+        <li>C++14</li>
+      </ul>
+    </p>
+    <p>
+      Shoot me an e-mail at <a href="mailto:work@notbjerg.me">work@notbjerg.me</a>.
+    </p>
+  </section>
 </body>
 </html>
