@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	<meta name="description" content="{{ description }}">
+	<link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+	<article id="content">
+		<h1>{{ title }}</h1>
+
+		<ul>
+			{{#each collections.posts}}
+				<li>{{ formatDate date }}: <a href="{{ path }}">{{ title }}</a></li>
+			{{/each}}
+		</ul>
+	</article>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	<meta name="description" content="{{ description }}">
+	<link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+	<article id="content">
+		<h1>{{ title }}</h1>
+
+		<div id="meta">
+			<span class="date">⇠ <a href="/">Back</a> | {{ formatDate date }}</span>
+			<span class="reading-time">Reading time: ~{{ readingTime }}</span>
+		</div>
+
+		{{{ contents }}}
+	</article>
+</body>
+</html>
