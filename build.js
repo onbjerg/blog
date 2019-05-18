@@ -30,10 +30,6 @@ Metalsmith(__dirname)
   }))
   .use(readingTime())
   .use(permalinks())
-  .use(assets({
-    source: './assets',
-    destination: './assets'
-  }))
   .use(layouts({
   	default: 'post.hbs',
     engineOptions: {
@@ -46,6 +42,10 @@ Metalsmith(__dirname)
         }
       }
     }
+  }))
+  .use(assets({
+    source: './assets',
+    destination: './assets'
   }))
   .build((err, files) => {
     if (err) { throw err }
