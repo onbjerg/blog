@@ -18,3 +18,4 @@ jobs:
         FOLDER: build
         BUILD_SCRIPT: npm install && npm run-script build
         CNAME: notbjerg.me
+        FOLDER: build
